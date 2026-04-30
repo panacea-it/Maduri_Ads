@@ -1,0 +1,205 @@
+/* ===== Global CSS Variables ===== */
+:root {
+  --primary: #2f6fb5;
+  --primary-dark: #21548a;
+  --primary-light: #5d97d9;
+  --secondary: #8aa2bf;
+  --accent: #f1a43a;
+  --success: #2f8f5b;
+  --danger: #c85b64;
+
+  --text-primary: #18314f;
+  --text-secondary: #4b5f7a;
+  --text-muted: #66788f;
+
+  --bg-primary: #ffffff;
+  --bg-secondary: #f4f8fd;
+  --bg-tertiary: #e9f1fb;
+  --bg-card: #ffffff;
+
+  --border: #d8e4f0;
+  --border-light: #edf3f8;
+
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 6px 14px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 12px 24px rgba(15, 23, 42, 0.08);
+  --shadow-xl: 0 22px 38px rgba(15, 23, 42, 0.12);
+  --shadow-hover: 0 16px 30px rgba(15, 23, 42, 0.14);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 26px;
+  --radius-full: 9999px;
+
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+  --space-xxl: 64px;
+
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+}
+
+/* ===== Reset ===== */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text-primary);
+  background:
+    radial-gradient(circle at top left, rgba(47, 111, 181, 0.05), transparent 28%),
+    radial-gradient(circle at top right, rgba(241, 164, 58, 0.04), transparent 24%),
+    var(--bg-secondary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* ===== Global Container ===== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+/* ===== Global Buttons ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  white-space: nowrap;
+  font-family: inherit;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--success) 0%, #256a43 100%);
+  color: white;
+  box-shadow: 0 12px 24px rgba(47, 143, 91, 0.22);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 28px rgba(47, 143, 91, 0.28);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--primary);
+  border: 1.5px solid var(--border);
+}
+.btn-secondary:hover {
+  border-color: var(--primary);
+}
+
+.btn-success {
+  background: linear-gradient(135deg, var(--success) 0%, #256a43 100%);
+  color: white;
+}
+.btn-success:hover {
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary);
+  border: 1.5px solid var(--primary);
+}
+.btn-outline:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-outline-light {
+  background: transparent;
+  color: white;
+  border: 1.5px solid rgba(255,255,255,0.8);
+}
+.btn-outline-light:hover {
+  background: white;
+  color: var(--primary);
+}
+
+.btn-large  { padding: 14px 32px; font-size: 1.05rem; }
+.btn-xlarge { padding: 16px 40px; font-size: 1.08rem; }
+.btn-block  { width: 100%; }
+
+.btn-arrow { transition: transform 0.2s ease; }
+.btn:hover .btn-arrow { transform: translateX(4px); }
+
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.05em;
+  height: 1.05em;
+  flex: 0 0 auto;
+}
+
+.btn-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ===== Shared highlight text ===== */
+.highlight {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== Shared hero badge ===== */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.92);
+  padding: 8px 20px;
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: var(--space-md);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ===== Shared section header ===== */
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+.section-title {
+  font-family: Manrope, Inter, sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+  letter-spacing: -0.03em;
+}
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}

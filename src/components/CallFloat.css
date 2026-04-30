@@ -1,0 +1,59 @@
+.call-float {
+  position: fixed;
+  left: 0;
+  top: 58%;
+  z-index: 998;
+  display: block;
+  width: 58px;
+  overflow: hidden;
+  border-radius: 0 10px 10px 0;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.28);
+  transform: translateY(-50%);
+}
+
+.call-float__top {
+  display: grid;
+  place-items: center;
+  height: 30px;
+  background: #000000;
+}
+
+.call-float__top svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.call-float__body {
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  padding: 9px 6px 8px;
+  background: linear-gradient(135deg, #f1a43a 0%, #e69122 100%);
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.call-float__icon {
+  width: 23px;
+  height: 23px;
+}
+
+@media (max-width: 380px) {
+  .call-float {
+    top: 60%;
+    width: 54px;
+  }
+
+  .call-float__body {
+    font-size: 0.76rem;
+  }
+}
