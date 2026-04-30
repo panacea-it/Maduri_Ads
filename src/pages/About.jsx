@@ -7,8 +7,8 @@ const aboutPoints = [
     text: 'We help clients choose the right newspaper, category, and edition based on the kind of advertisement they need.',
   },
   {
-    title: 'Strong category knowledge',
-    text: 'From property and recruitment to notices, matrimonial, and personal announcements, we guide the booking flow end to end.',
+    title: 'Strong category knowledge ',
+    text: 'From property and  recruitment to notices, matrimonial, and personal announcements, we guide the booking flow end to end.',
   },
   {
     title: 'Fast, clear communication',
